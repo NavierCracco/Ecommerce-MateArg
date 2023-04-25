@@ -1,0 +1,32 @@
+.containerDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerDetail .btnCard {
+  width: 25rem;
+  height: 3rem;
+  color: var(--clr-white);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 1s ease;
+  box-shadow: 0.4rem 0.4rem 0.8rem var(--clr-thistle),
+    -0.4rem -0.4rem 0.8rem var(--clr-white);
+}
+
+.precio {
+  width: 8rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18181815;
+  border-radius: 5px;
+}

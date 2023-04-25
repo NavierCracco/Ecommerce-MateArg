@@ -1,0 +1,138 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 4rem;
+  background-color: #ffffff50;
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+  padding: 1.5rem 3rem;
+}
+
+.container {
+  width: 65%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+  padding: 2rem;
+}
+.container h3 {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.dataOrder {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+}
+
+.comprador {
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.containerDetalle {
+  padding: 0.4rem;
+  border-top: #ccc solid 1px;
+}
+.encabezado {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.infoProducto {
+  height: 4rem;
+  text-align: center;
+}
+
+.tableFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+.tableFooter .total {
+  width: 10rem;
+  height: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #ffffff50;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+}
+
+.tableFooter .btn,
+.containerConfirm .btn {
+  width: 8rem;
+  height: 3rem;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #bbb;
+}
+
+.btn:hover {
+  transition: 0.5s;
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #2b2b2b;
+  color: #ccc;
+}
+
+.tableFooter .btn:active,
+.containerConfirm .btn:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #3d3d3d;
+  border: solid 2px #3d3d3d;
+}
+
+.wrapperConfirm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 4rem;
+  background-color: #ffffff50;
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+  padding: 1.5rem 3rem;
+}
+
+.containerConfirm {
+  width: 65%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+  padding: 2rem;
+}
