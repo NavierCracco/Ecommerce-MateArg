@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { dataContext } from "../../contexts/dataContext";
 import { FaTrashAlt } from "react-icons/fa";
 import styles from "./cartItem.module.css";
-import CartCantidad from "../CartCantidad";
+import CartCantidad from "../CartQuantity";
 
 function CartItem() {
   const { cart, eliminarProducto } = useContext(dataContext);

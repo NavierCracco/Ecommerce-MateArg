@@ -12,10 +12,6 @@ const Navbar = () => {
             src="https://firebasestorage.googleapis.com/v0/b/ecommerce-d9504.appspot.com/o/imagenes%2Flogo-matearg-white.png?alt=media&token=5629d0f6-5608-48f6-ae9a-6d5973c5c945"
             alt="logo"
           />
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/ecommerce-d9504.appspot.com/o/imagenes%2Flogo-matearg-white.png?alt=media&token=5629d0f6-5608-48f6-ae9a-6d5973c5c945"
-            alt="logo"
-          />
         </NavLink>
         <NavLink className={styles.logoTitulo} to="/">
           <p>MateArg</p>

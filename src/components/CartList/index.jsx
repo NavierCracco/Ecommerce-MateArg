@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import { dataContext } from "../../contexts/dataContext";
 import { BiHappyBeaming } from "react-icons/bi";
 import styles from "./cartlist.module.css";
-import CartCantidad from "../CartCantidad";
+import CartCantidad from "../CartQuantity";
 
 function CartList() {
   const { cart, eliminarProducto } = useContext(dataContext);
