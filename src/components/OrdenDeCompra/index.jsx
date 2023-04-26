@@ -27,10 +27,10 @@ function OrdenDeCompra({ order, orderId, nombre, apellido }) {
               <th>Productos</th>
               <th>Cantidad</th>
               <th>Precio unitario</th>
-              <th>Precio total</th>
+              <th>Subtotal</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className={styles.bodyForm}>
             {order.items.map((item) => (
               <tr key={orderId} className={styles.infoProducto}>
                 <td>{item.titulo}</td>

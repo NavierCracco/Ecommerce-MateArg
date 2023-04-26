@@ -1,5 +1,5 @@
-import React from "react";
 import ItemListContainer from "../ItemListContainer";
+import CartList from "../CartList";
 import Titulo from "../Titulo";
 import styles from "./productosPage.module.css";
 
@@ -9,6 +9,7 @@ function ProductosPage() {
       <Titulo titulo={"Productos"} />
       <div className={styles.main}>
         <ItemListContainer />
+        <CartList />
       </div>
     </>
   );

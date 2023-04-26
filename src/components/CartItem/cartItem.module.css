@@ -1,7 +1,7 @@
 .productos {
   font-size: 1.2rem;
   text-transform: uppercase;
-  height: 5rem;
+  min-height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 }
 
 .productos img {
-  width: 3rem;
+  width: 6%;
 }
 
 .productos .eliminar:hover {

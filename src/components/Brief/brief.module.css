@@ -1,14 +1,15 @@
 .wrapper {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem 4rem;
   background-color: #ffffff50;
   border-radius: 15px;
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
   padding: 1.5rem 3rem;
+  margin: 4rem 0;
 }
 
 .container {
@@ -20,7 +21,7 @@
   border-radius: 15px;
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 4rem;
+  padding: 2rem 4rem;
 }
 
 .checkoutTitulo {
@@ -34,12 +35,11 @@
   flex-direction: column;
   align-items: center;
   padding-top: 3rem;
-  padding-bottom: 2rem;
   gap: 1.5rem;
 }
 
 .checkoutForm input {
-  width: 25rem;
+  width: 100%;
   padding: 0.8rem;
   outline: none;
   border-radius: 5px;
@@ -53,8 +53,8 @@
 }
 
 .pagar {
-  width: 10rem;
-  height: 3rem;
+  width: 40%;
+  min-height: 3rem;
   color: var(--clr-white);
   font-size: 1rem;
   font-weight: 600;

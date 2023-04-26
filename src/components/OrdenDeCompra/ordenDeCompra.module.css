@@ -1,14 +1,17 @@
-.wrapper {
+.wrapper,
+.wrapperConfirm {
+  width: 90%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem 4rem;
   background-color: #ffffff50;
   border-radius: 15px;
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
   padding: 1.5rem 3rem;
+  margin: 4rem 0;
 }
 
 .container {
@@ -50,11 +53,12 @@
 }
 
 .infoProducto {
-  height: 4rem;
+  height: 3rem;
   text-align: center;
 }
 
 .tableFooter {
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
@@ -63,8 +67,8 @@
 }
 
 .tableFooter .total {
-  width: 10rem;
-  height: 3rem;
+  width: 50%;
+  min-height: 3rem;
   font-weight: 500;
   text-transform: uppercase;
   display: flex;
@@ -78,8 +82,8 @@
 
 .tableFooter .btn,
 .containerConfirm .btn {
-  width: 8rem;
-  height: 3rem;
+  width: 50%;
+  min-height: 3rem;
   color: var(--clr-white);
   font-size: 0.9rem;
   font-weight: 600;
@@ -110,19 +114,6 @@
   border: solid 2px #3d3d3d;
 }
 
-.wrapperConfirm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 4rem;
-  background-color: #ffffff50;
-  border-radius: 15px;
-  border: #ffffff50 solid 2px;
-  box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 1.5rem 3rem;
-}
-
 .containerConfirm {
   width: 65%;
   text-transform: uppercase;
@@ -134,5 +125,5 @@
   border-radius: 15px;
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 2rem;
+  padding: 4rem;
 }

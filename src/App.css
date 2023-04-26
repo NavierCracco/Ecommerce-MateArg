@@ -2,7 +2,7 @@
 
 :root {
   --clr-black: #181818;
-  --clr-white: #fffcf4;
+  --clr-white: #fff;
   --clr-thistle: #ddbdd5;
   --clr-yellow: #ffc857;
   --clr-blue: #0b1d51;
@@ -44,4 +44,5 @@ body {
   background-color: #ebedef;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }

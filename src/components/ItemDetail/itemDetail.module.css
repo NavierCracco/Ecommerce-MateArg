@@ -6,8 +6,8 @@
 }
 
 .containerDetail .btnCard {
-  width: 25rem;
-  height: 3rem;
+  width: 75%;
+  min-height: 3rem;
   color: var(--clr-white);
   font-weight: 500;
   font-size: 1.2rem;
@@ -17,13 +17,18 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 1s ease;
-  box-shadow: 0.4rem 0.4rem 0.8rem var(--clr-thistle),
-    -0.4rem -0.4rem 0.8rem var(--clr-white);
+  box-shadow: 0.4rem 0.4rem 0.8rem #ccc, -0.4rem -0.4rem 0.8rem var(--clr-white);
+}
+
+.containerDetail .btnCard:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #3d3d3d;
+  border: solid 2px #3d3d3d;
 }
 
 .precio {
-  width: 8rem;
-  height: 2.5rem;
+  width: 30%;
+  min-height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;

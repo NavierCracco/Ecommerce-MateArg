@@ -2,7 +2,6 @@
   width: 26rem;
   background-color: #ffffff50;
   border-radius: 15px;
-  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -16,6 +15,7 @@
 }
 
 .productos {
+  width: 100%;
   min-height: 5rem;
   text-transform: uppercase;
   display: flex;
@@ -28,6 +28,7 @@
   margin-bottom: 0.6rem;
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
+  gap: 0.5rem;
 }
 
 .productos:hover {
@@ -43,7 +44,7 @@
 }
 
 .productos img {
-  width: 3rem;
+  width: 15%;
 }
 
 .productos .eliminar:hover {

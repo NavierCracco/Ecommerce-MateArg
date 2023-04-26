@@ -1,7 +1,12 @@
 import Titulo from "../Titulo";
+import styles from "./contactoPage.module.css";
 
 const ContactoPage = () => {
-  return <Titulo titulo={"Contáctenos"} />;
+  return (
+    <div className={styles.main}>
+      <Titulo titulo={"Contáctenos"} />
+    </div>
+  );
 };
 
 export default ContactoPage;
