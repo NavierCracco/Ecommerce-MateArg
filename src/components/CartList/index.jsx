@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { dataContext } from "../../contexts/dataContext";
 import { BiHappyBeaming } from "react-icons/bi";
-import styles from "./cartlist.module.css";
+import styles from "./cartList.module.css";
 import CartCantidad from "../CartQuantity";
 
 function CartList() {
