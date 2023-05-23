@@ -2,8 +2,8 @@ import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { dataContext } from "../../contexts/dataContext";
 import { BiHappyBeaming } from "react-icons/bi";
-import styles from "./cartList.module.css";
 import CartCantidad from "../CartQuantity";
+import styles from "./cartList.module.css";
 
 function CartList() {
   const { cart, eliminarProducto } = useContext(dataContext);

@@ -1,3 +1,9 @@
+.main {
+  display: flex;
+  margin: 2rem 3rem;
+  gap: 1.5rem;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
@@ -17,8 +23,4 @@
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 2rem;
-}
-
-.pagination {
-  padding-top: 1rem;
 }

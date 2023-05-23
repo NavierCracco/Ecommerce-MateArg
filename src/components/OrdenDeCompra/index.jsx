@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import styles from "./ordenDeCompra.module.css";
 import { dataContext } from "../../contexts/dataContext";
 import { NavLink } from "react-router-dom";
+import styles from "./ordenDeCompra.module.css";
 
 function OrdenDeCompra({ order, orderId, nombre, apellido }) {
   const { vaciarCarrito, cart } = useContext(dataContext);

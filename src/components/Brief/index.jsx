@@ -1,9 +1,9 @@
 import { NavLink, useParams } from "react-router-dom";
-import styles from "./brief.module.css";
 import { useContext, useState } from "react";
 import { dataContext } from "../../contexts/dataContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import OrdenDeCompra from "../OrdenDeCompra";
+import styles from "./brief.module.css";
 
 const db = getFirestore();
 const ordersCollection = collection(db, "orders");

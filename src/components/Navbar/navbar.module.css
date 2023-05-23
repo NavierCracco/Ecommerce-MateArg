@@ -40,7 +40,9 @@
 }
 
 .btn {
-  color: var(--clr-white);
+  display: flex;
+  align-items: center;
+  color: rgb(200, 200, 200);
   font-weight: 400;
   font-size: 1rem;
   background-color: transparent;
@@ -59,16 +61,11 @@
 }
 
 .sections .btn:hover {
-  color: rgb(187, 187, 187);
+  color: var(--clr-white);
   transition: 0.6s;
 }
 
 .cart {
   display: flex;
   align-items: center;
-}
-
-.arrowDown {
-  position: relative;
-  top: 3.5px;
 }

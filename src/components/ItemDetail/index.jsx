@@ -1,8 +1,7 @@
-import React from "react";
-import styles from "./itemDetail.module.css";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { dataContext } from "../../contexts/dataContext";
+import styles from "./itemDetail.module.css";
 
 function ItemDetail() {
   const { productos } = useContext(dataContext);

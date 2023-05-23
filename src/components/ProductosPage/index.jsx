@@ -7,10 +7,10 @@ function ProductosPage() {
   return (
     <>
       <Titulo titulo={"Productos"} />
-      <div className={styles.main}>
+      <main className={styles.main}>
         <ItemListContainer />
         <CartList />
-      </div>
+      </main>
     </>
   );
 }
