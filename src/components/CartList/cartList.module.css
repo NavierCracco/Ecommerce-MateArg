@@ -1,3 +1,5 @@
+@import "./media-quaries.module.css";
+
 .container {
   width: 26rem;
   background-color: #ffffff50;

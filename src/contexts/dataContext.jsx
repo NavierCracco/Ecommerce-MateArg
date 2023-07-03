@@ -8,6 +8,11 @@ const DataProvider = ({ children }) => {
   const [productos, setProductos] = useState([]);
   const productosRef = collection(db, "productos");
   const [cart, setCart] = useState([]);
+  const [apellido, setApellido] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [mail, setMail] = useState("");
+
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   const getProductos = async () => {
     const productosCollection = await getDocs(productosRef);
@@ -52,6 +57,10 @@ const DataProvider = ({ children }) => {
     setCart([]);
   };
 
+  const isFormComplete = () => {
+    return nombre !== "" && apellido !== "" && mail !== "";
+  };
+
   return (
     <dataContext.Provider
       value={{
@@ -63,6 +72,15 @@ const DataProvider = ({ children }) => {
         eliminarProducto,
         vaciarCarrito,
         total,
+        isButtonDisabled,
+        setIsButtonDisabled,
+        isFormComplete,
+        nombre,
+        apellido,
+        setApellido,
+        setNombre,
+        mail,
+        setMail,
       }}
     >
       {children}

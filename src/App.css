@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
+  --clr-main: #ebedef;
   --clr-black: #181818;
   --clr-white: #fff;
-  --clr-thistle: #ddbdd5;
-  --clr-yellow: #ffc857;
-  --clr-blue: #0b1d51;
-  --clr-orange: #dd6e42;
 }
 
 * {
@@ -44,5 +41,5 @@ body {
   background-color: #ebedef;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: space-between;
 }

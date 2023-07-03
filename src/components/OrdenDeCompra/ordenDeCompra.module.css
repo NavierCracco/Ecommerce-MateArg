@@ -1,91 +1,67 @@
-.wrapper,
-.wrapperConfirm {
-  width: 90%;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff50;
-  border-radius: 15px;
-  border: #ffffff50 solid 2px;
-  box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 1.5rem 3rem;
-  margin: 4rem 0;
-}
+@import "./media-quaries.module.css";
 
-.container {
-  width: 65%;
-  text-transform: uppercase;
+.containerOrder {
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--clr-white);
-  border-radius: 15px;
-  border: #ffffff50 solid 2px;
-  box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 2rem;
+  padding-top: 2rem;
 }
-.container h3 {
+.containerOrder h3 {
   font-size: 2rem;
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
-  padding-bottom: 1rem;
+  align-items: flex-start;
+  padding-bottom: 2rem;
 }
 
-.dataOrder {
+.containerProducts {
+  padding-left: 2rem;
+  width: 100%;
+  min-height: 5rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
+  gap: 0.5rem;
 }
 
-.comprador {
-  font-weight: bold;
-  padding-bottom: 1rem;
-}
-
-.containerDetalle {
-  padding: 0.4rem;
-  border-top: #ccc solid 1px;
-}
-.encabezado {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.infoProducto {
-  height: 3rem;
-  text-align: center;
-}
-
-.tableFooter {
-  width: 30%;
+.containerProducts .product {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  padding-top: 1rem;
-  padding-right: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerProducts .product img {
+  width: 16%;
+}
+.precio {
+  background-color: #f1f1f1;
+  padding: 0.3rem;
+}
+.actions {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-.tableFooter .total {
-  width: 50%;
+.actions .total {
+  background-color: #f1f1f1;
   min-height: 3rem;
   font-weight: 500;
   text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.3rem;
   border-radius: 5px;
-  background-color: #ffffff50;
-  border: #ffffff50 solid 2px;
-  box-shadow: 0.5em 0.5rem 1rem #ccc;
 }
 
-.tableFooter .btn,
-.containerConfirm .btn {
-  width: 50%;
+.pagar {
+  width: 40%;
   min-height: 3rem;
   color: var(--clr-white);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
   display: flex;
@@ -97,33 +73,21 @@
   cursor: pointer;
   transition: all 1s ease;
   border: #ffffff50 solid 2px;
-  box-shadow: 0.3em 0.3rem 1rem #bbb;
+  box-shadow: 0.3em 0.3rem 1rem #ddd;
 }
 
-.btn:hover {
+.pagar:hover {
   transition: 0.5s;
   box-shadow: inset 0.2rem 0.2rem 1rem #242424,
     inset -0.2rem -0.2rem 1rem #2b2b2b;
   color: #ccc;
 }
 
-.tableFooter .btn:active,
-.containerConfirm .btn:active {
-  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
-    inset -0.2rem -0.2rem 1rem #3d3d3d;
-  border: solid 2px #3d3d3d;
+.pagar:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #3a3a3a,
+    inset -0.2rem -0.2rem 1rem #333333;
 }
 
-.containerConfirm {
-  width: 65%;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  background-color: var(--clr-white);
-  border-radius: 15px;
-  border: #ffffff50 solid 2px;
-  box-shadow: 0.5em 0.5rem 1rem #ccc;
-  padding: 4rem;
+.product .faCircle {
+  font-size: 0.5rem;
 }

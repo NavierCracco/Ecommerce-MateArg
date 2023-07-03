@@ -1,0 +1,24 @@
+@media (max-width: 430px) {
+  .container {
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .container .comprar {
+    width: 50%;
+    padding: 0.5rem;
+  }
+  .container .containerDerecha {
+    width: 100%;
+    gap: 1rem;
+  }
+  .container .containerDerecha .total {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .container .containerDerecha .vaciarCarrito {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}

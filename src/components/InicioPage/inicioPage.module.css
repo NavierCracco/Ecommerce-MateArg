@@ -1,3 +1,5 @@
+@import "./media-quaries.module.css";
+
 .tituloContainer {
   font-size: 1.5rem;
   display: flex;

@@ -3,7 +3,7 @@ import styles from "./itemDetailContainer.module.css";
 
 const ItemDetailContainer = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.mainContainer}>
       <ItemDetail />
     </div>
   );

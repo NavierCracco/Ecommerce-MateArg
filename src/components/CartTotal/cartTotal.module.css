@@ -1,9 +1,9 @@
+@import "./media-quaries.module.css";
+
 .container {
   display: flex;
-  justify-content: space-between;
-  padding-left: 2rem;
+  justify-content: space-around;
   padding-top: 1rem;
-  padding-right: 2rem;
 }
 
 .containerDerecha {

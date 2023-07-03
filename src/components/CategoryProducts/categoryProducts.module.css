@@ -1,3 +1,5 @@
+@import "./media-quaries.module.css";
+
 .main {
   display: flex;
   margin: 2rem 3rem;

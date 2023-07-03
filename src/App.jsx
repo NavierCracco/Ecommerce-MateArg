@@ -7,8 +7,8 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Checkout from "./components/Checkout";
-import "./App.css";
 import CategoryProducts from "./components/CategoryProducts";
+import "./App.css";
 
 function App() {
   return (

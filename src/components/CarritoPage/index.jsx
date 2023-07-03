@@ -10,22 +10,22 @@ function CarritoPage() {
   const { cart } = useContext(dataContext);
 
   return cart.length > 0 ? (
-    <>
+    <div className={styles.main}>
       <Titulo titulo={"Carrito"} />
       <div className={styles.container}>
         <CartItem />
         <CartTotal />
       </div>
-    </>
+    </div>
   ) : (
-    <>
+    <div className={styles.main}>
       <Titulo titulo={"Carrito"} />
       <div className={styles.container}>
         <h4>
           Tú carrito está vacío <TfiFaceSad />
         </h4>
       </div>
-    </>
+    </div>
   );
 }
 

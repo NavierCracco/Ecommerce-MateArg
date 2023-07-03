@@ -1,3 +1,5 @@
+@import "./media-queries.module.css";
+
 .card {
   display: flex;
   width: 90%;
@@ -11,7 +13,7 @@
 }
 
 .card img {
-  width: 60%;
+  width: 100%;
 }
 
 .card:hover {

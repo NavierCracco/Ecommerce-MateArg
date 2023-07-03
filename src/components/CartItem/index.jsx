@@ -8,14 +8,16 @@ function CartItem() {
   const { cart, eliminarProducto } = useContext(dataContext);
 
   return (
-    <>
+    <div>
       {cart.map((producto) => {
         return (
           <div key={producto.id} className={styles.productos}>
             <img src={producto.imagen} alt={producto.titulo} />
             <p className={styles.titulo}>{producto.titulo}</p>
             <CartCantidad producto={producto} />
-            <p>$ {producto.precio * producto.cantidad}</p>
+            <p className={styles.precio}>
+              $ {producto.precio * producto.cantidad}
+            </p>
             <FaTrashAlt
               className={styles.eliminar}
               onClick={() => eliminarProducto(producto.id)}
@@ -23,7 +25,7 @@ function CartItem() {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

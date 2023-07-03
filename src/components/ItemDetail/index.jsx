@@ -10,8 +10,15 @@ function ItemDetail() {
   const producto = productos.find((producto) => producto.id === id);
 
   return (
-    <>
-      <img src={producto.imagen} alt={producto.titulo} />
+    <div className={styles.container}>
+      <div className={styles.containerUp}>
+        <h3 className={styles.tituloMobile}>{producto.titulo}</h3>
+        <img
+          className={styles.imagen}
+          src={producto.imagen}
+          alt={producto.titulo}
+        />
+      </div>
       <div className={styles.containerDetail}>
         <h3>{producto.titulo}</h3>
         <p className={styles.precio}>$ {producto.precio}</p>
@@ -22,7 +29,7 @@ function ItemDetail() {
           Agregar al Carrito
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

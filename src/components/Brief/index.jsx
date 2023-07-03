@@ -1,4 +1,3 @@
-import { NavLink, useParams } from "react-router-dom";
 import { useContext, useState } from "react";
 import { dataContext } from "../../contexts/dataContext";
 import { addDoc, collection, getFirestore } from "firebase/firestore";
@@ -10,14 +9,27 @@ const ordersCollection = collection(db, "orders");
 
 function Brief() {
   const [orderId, setOrderId] = useState(null);
-  const [apellido, setApellido] = useState("");
-  const [nombre, setNombre] = useState("");
-  const { total, cart } = useContext(dataContext);
+  const [isApellidoFocused, setIsApellidoFocused] = useState(false);
+  const [isNombreFocused, setIsNombreFocused] = useState(false);
+  const [isMailFocused, setIsMailFocused] = useState(false);
+
+  const {
+    total,
+    cart,
+    isFormComplete,
+    setNombre,
+    setApellido,
+    apellido,
+    nombre,
+    mail,
+    setMail,
+  } = useContext(dataContext);
 
   const order = {
     cliente: {
-      nombre: { nombre },
-      apellido: { apellido },
+      nombre: nombre,
+      apellido: apellido,
+      mail: mail,
     },
     items: cart.map((producto) => ({
       titulo: producto.titulo,
@@ -29,12 +41,18 @@ function Brief() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!mail.includes("@")) {
+      alert("Por favor, ingrese un correo electrónico válido");
+      return;
+    }
+
     const docRef = await addDoc(ordersCollection, order);
     console.log("orden añadida con ID:", docRef.id);
     setOrderId(docRef.id);
   };
 
-  if (orderId === null && cart.length > 0) {
+  if (cart.length > 0) {
     return (
       <div className={styles.wrapper}>
         <div className={styles.container}>
@@ -47,7 +65,14 @@ function Brief() {
               required
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
+              onFocus={() => setIsNombreFocused(true)}
+              onBlur={() => setIsNombreFocused(false)}
             />
+            {!nombre && !isNombreFocused && (
+              <span className={styles.error}>
+                * Por favor, complete este campo. *
+              </span>
+            )}
             <input
               type="text"
               name="apellido"
@@ -55,24 +80,41 @@ function Brief() {
               required
               value={apellido}
               onChange={(e) => setApellido(e.target.value)}
+              onFocus={() => setIsApellidoFocused(true)}
+              onBlur={() => setIsApellidoFocused(false)}
             />
-            <input type="tel" name="telefono" placeholder="Teléfono" required />
-            <NavLink onClick={handleSubmit} className={styles.pagar}>
-              Pagar
-            </NavLink>
+            {!apellido && !isApellidoFocused && (
+              <span className={styles.error}>
+                * Por favor, complete este campo. *
+              </span>
+            )}
+            <input
+              type="email"
+              name="mail"
+              placeholder="E-mail"
+              required
+              value={mail}
+              onChange={(e) => setMail(e.target.value)}
+              onFocus={() => setIsMailFocused(true)}
+              onBlur={() => setIsMailFocused(false)}
+            />
+            {!mail && !isMailFocused && (
+              <span className={styles.error}>
+                * Por favor, complete este campo. *
+              </span>
+            )}
           </form>
+          <button
+            className={styles.btn}
+            onClick={handleSubmit}
+            disabled={!isFormComplete()}
+          >
+            Confirmar
+          </button>
         </div>
+        <div className={styles.separator}></div>
+        <OrdenDeCompra total={total} />
       </div>
-    );
-  }
-  if (orderId !== null) {
-    return (
-      <OrdenDeCompra
-        order={order}
-        orderId={orderId}
-        nombre={nombre}
-        apellido={apellido}
-      />
     );
   }
 }

@@ -16,7 +16,7 @@ const CategoryProducts = () => {
 
   console.log(filteredProducts);
   return (
-    <>
+    <div>
       <Titulo titulo={categoria} />
       <main className={styles.main}>
         <div className={styles.wrapper}>
@@ -28,7 +28,7 @@ const CategoryProducts = () => {
         </div>
         <CartList />
       </main>
-    </>
+    </div>
   );
 };
 

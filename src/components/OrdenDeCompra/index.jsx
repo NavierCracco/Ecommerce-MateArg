@@ -1,62 +1,70 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { dataContext } from "../../contexts/dataContext";
-import { NavLink } from "react-router-dom";
+import { FaCircle } from "react-icons/fa";
 import styles from "./ordenDeCompra.module.css";
+import MercadoPago from "../MercadoPago";
+import axios from "axios";
 
-function OrdenDeCompra({ order, orderId, nombre, apellido }) {
-  const { vaciarCarrito, cart } = useContext(dataContext);
+function OrdenDeCompra({ total }) {
+  const { cart, isFormComplete } = useContext(dataContext);
+  const [preferenceId, setPreferenceId] = useState(null);
 
-  const handleClick = () => {
-    vaciarCarrito();
+  const createPreference = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/create_preference",
+        {
+          items: cart.map((producto) => ({
+            title: producto.titulo,
+            price: producto.precio,
+            quantity: producto.cantidad,
+            currency_id: "ARS",
+          })),
+        }
+      );
+
+      const { id } = response.data;
+      return id;
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  return cart.length > 0 ? (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <h3>Finaliza el pago</h3>
-        <div className={styles.dataOrder}>
-          <small>fecha</small>
-          <small>N° Orden: {orderId}</small>
-        </div>
-        <p className={styles.comprador}>
-          {nombre} {apellido}
-        </p>
-        <table className={styles.containerDetalle}>
-          <thead className={styles.encabezado}>
-            <tr>
-              <th>Productos</th>
-              <th>Cantidad</th>
-              <th>Precio unitario</th>
-              <th>Subtotal</th>
-            </tr>
-          </thead>
-          <tbody className={styles.bodyForm}>
-            {order.items.map((item) => (
-              <tr key={orderId} className={styles.infoProducto}>
-                <td>{item.titulo}</td>
-                <td>{item.cantidad}</td>
-                <td>{item.precio}</td>
-                <td>{item.cantidad * item.precio}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+  const handleBuy = async () => {
+    const id = await createPreference();
+
+    if (id) {
+      setPreferenceId(id);
+    }
+  };
+
+  return (
+    <div className={styles.containerOrder}>
+      <h3>Finaliza el pago</h3>
+      <div className={styles.containerProducts}>
+        {cart.map((producto) => {
+          return (
+            <div className={styles.product} key={producto.id}>
+              <FaCircle className={styles.faCircle} />
+              <img src={producto.imagen} alt={producto.titulo} />
+              <small>x{producto.cantidad}</small>
+              <p>{producto.titulo}</p>
+              <p className={styles.precio}>${producto.precio}</p>
+            </div>
+          );
+        })}
       </div>
-      <div className={styles.tableFooter}>
-        <p className={styles.total}>Total: $ {order.total}</p>
-        <button onClick={handleClick} className={styles.btn}>
-          pagar
+      <div className={styles.actions}>
+        <p className={styles.total}>Total: $ {total}</p>
+        <button
+          onClick={handleBuy}
+          className={styles.pagar}
+          disabled={!isFormComplete()}
+        >
+          Pagar
         </button>
       </div>
-    </div>
-  ) : (
-    <div className={styles.wrapperConfirm}>
-      <div className={styles.containerConfirm}>
-        <p>compra confirmada</p>
-        <NavLink className={styles.btn} to="/">
-          volver
-        </NavLink>
-      </div>
+      <MercadoPago preferenceId={preferenceId} />
     </div>
   );
 }

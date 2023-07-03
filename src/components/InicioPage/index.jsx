@@ -4,7 +4,7 @@ import styles from "./inicioPage.module.css";
 
 function InicioPage() {
   return (
-    <>
+    <div>
       <div className={styles.tituloContainer}>
         <h1>MateArg</h1>
       </div>
@@ -12,7 +12,7 @@ function InicioPage() {
         <ItemListContainer />
         <CartList />
       </div>
-    </>
+    </div>
   );
 }
 

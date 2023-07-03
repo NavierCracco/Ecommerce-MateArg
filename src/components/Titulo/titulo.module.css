@@ -11,3 +11,9 @@
   border: #ffffff50 solid 2px;
   box-shadow: 0.5em 0.5rem 1rem #ccc;
 }
+
+@media (max-width: 430px) {
+  .container {
+    margin: 2rem 2rem 0 2rem;
+  }
+}

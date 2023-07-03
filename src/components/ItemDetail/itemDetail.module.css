@@ -1,8 +1,26 @@
+@import "./media-quaries.module.css";
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .imagen {
+  width: 100%;
+  border-right: solid 2px #ccc;
+}
+
 .containerDetail {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.containerDetail h3 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
 }
 
 .containerDetail .btnCard {
@@ -34,4 +52,8 @@
   align-items: center;
   background-color: #18181815;
   border-radius: 5px;
+}
+
+.container .tituloMobile {
+  display: none;
 }

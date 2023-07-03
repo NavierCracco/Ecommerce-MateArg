@@ -53,7 +53,7 @@ const MenuDropDown = () => {
   let open = active ? styles.openMenu : null;
 
   return (
-    <>
+    <div>
       <button
         className={styles.btn}
         onClick={handleClick}
@@ -77,7 +77,7 @@ const MenuDropDown = () => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
