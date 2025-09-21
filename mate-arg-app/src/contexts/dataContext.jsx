@@ -1,6 +1,7 @@
 import { collection, getDocs } from "firebase/firestore";
 import { createContext, useEffect, useState } from "react";
-import db from "../../db/firebase-config";
+import { PropTypes } from "prop-types";
+import db from "../../../server/db/firebase-config";
 
 const dataContext = createContext();
 
@@ -86,6 +87,10 @@ const DataProvider = ({ children }) => {
       {children}
     </dataContext.Provider>
   );
+};
+
+DataProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export { DataProvider, dataContext };
