@@ -1,0 +1,31 @@
+@import "./media-quaries.module.css";
+
+.productos {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--clr-white);
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5rem 0.5rem 1rem #cacaca;
+  border-radius: 10px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.productos .titulo {
+  font-weight: bold;
+}
+
+.productos img {
+  width: 6%;
+}
+
+.productos .eliminar:hover {
+  color: rgb(235, 27, 27);
+  cursor: pointer;
+  transition: 0.2s;
+}

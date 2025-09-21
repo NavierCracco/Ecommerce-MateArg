@@ -1,0 +1,59 @@
+@import "./media-quaries.module.css";
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.container .imagen {
+  width: 100%;
+  border-right: solid 2px #ccc;
+}
+
+.containerDetail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerDetail h3 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.containerDetail .btnCard {
+  width: 75%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-weight: 500;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 1s ease;
+  box-shadow: 0.4rem 0.4rem 0.8rem #ccc, -0.4rem -0.4rem 0.8rem var(--clr-white);
+}
+
+.containerDetail .btnCard:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #3d3d3d;
+  border: solid 2px #3d3d3d;
+}
+
+.precio {
+  width: 30%;
+  min-height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #18181815;
+  border-radius: 5px;
+}
+
+.container .tituloMobile {
+  display: none;
+}

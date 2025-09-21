@@ -1,0 +1,19 @@
+.container {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 6rem;
+  margin: 3rem 4rem 0 4rem;
+  border-radius: 15px;
+  background-color: #ffffff50;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+}
+
+@media (max-width: 430px) {
+  .container {
+    margin: 2rem 2rem 0 2rem;
+  }
+}

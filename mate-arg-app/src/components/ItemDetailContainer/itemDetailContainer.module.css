@@ -1,0 +1,15 @@
+.mainContainer {
+  margin: 5rem;
+  padding: 3rem 3rem 3rem 0rem;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+}
+
+@media (max-width: 430px) {
+  .mainContainer {
+    margin: 2.5rem;
+    padding: 3rem 0;
+  }
+}

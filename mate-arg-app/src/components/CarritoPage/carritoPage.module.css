@@ -1,0 +1,16 @@
+@import "./media-quaries.module.css";
+
+.main {
+  height: 80vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 3rem;
+  background-color: #ffffff50;
+  border-radius: 20px;
+  padding: 2rem;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5rem 0.5rem 1rem #cacaca;
+}

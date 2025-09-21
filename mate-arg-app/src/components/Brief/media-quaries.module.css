@@ -1,0 +1,18 @@
+@media (max-width: 430px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .wrapper .container {
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid #bbb;
+  }
+
+  .wrapper .container .checkoutForm input {
+    width: 100%;
+  }
+  .wrapper .separator {
+    display: none;
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sumaCantidad {
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: rgba(230, 230, 230, 0.658);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.restaCantidad {
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: rgba(230, 230, 230, 0.76);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.restaCantidad:hover,
+.sumaCantidad:hover {
+  background-color: rgb(220, 220, 220);
+}

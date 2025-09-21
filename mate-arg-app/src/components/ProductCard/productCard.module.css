@@ -1,0 +1,72 @@
+@import "./media-queries.module.css";
+
+.card {
+  display: flex;
+  width: 90%;
+  min-height: 11rem;
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  border-radius: 15px;
+  padding: 1rem;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  transition: all 0.6s ease;
+  box-shadow: inset 0.3rem 0.3rem 0.4rem #f1f1f1,
+    inset 0.3rem 0.3rem 1rem #ecebeb;
+  transform: scale(0.98);
+}
+
+.productoInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #ccc;
+  padding-left: 0.5rem;
+}
+
+.productoInfo h3 {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.productoInfo .price {
+  width: 50%;
+  min-height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #18181815;
+}
+
+.productoInfo .btnCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.8rem;
+  color: var(--clr-white);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 1s ease;
+  box-shadow: 0.4rem 0.4rem 0.8rem #ccc, -0.4rem -0.4rem 0.8rem var(--clr-white);
+}
+
+.productoInfo .btnCard:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #3d3d3d;
+  border: solid 2px #3d3d3d;
+}

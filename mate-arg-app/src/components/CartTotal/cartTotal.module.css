@@ -1,0 +1,79 @@
+@import "./media-quaries.module.css";
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+
+.containerDerecha {
+  width: 30%;
+  display: flex;
+  gap: 1rem;
+}
+
+.container .total {
+  width: 50%;
+  min-height: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #ffffff50;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+}
+
+.comprar {
+  width: 15%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #bbb;
+}
+
+.vaciarCarrito {
+  width: 50%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #bbb;
+}
+
+.vaciarCarrito:hover,
+.comprar:hover {
+  transition: 0.5s;
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #2b2b2b;
+  color: #ccc;
+}
+
+.vaciarCarrito:active,
+.comprar:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #3a3a3a,
+    inset -0.2rem -0.2rem 1rem #333333;
+}

@@ -1,0 +1,26 @@
+@import "./media-queries.module.css";
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff50;
+  border-radius: 20px;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5rem 0.5rem 1rem #cacaca;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.pagination {
+  padding-top: 1rem;
+}

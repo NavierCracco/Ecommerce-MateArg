@@ -1,0 +1,129 @@
+@import "./media-quaries.module.css";
+
+.wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--clr-white);
+  border-radius: 15px;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.5em 0.5rem 1rem #ccc;
+  padding: 1.5rem 3rem;
+  margin: 4rem 0;
+}
+
+.container {
+  width: 70%;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.checkoutTitulo {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.checkoutForm {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.checkoutForm input {
+  width: 70%;
+  padding: 0.8rem;
+  outline: none;
+  border: 1px solid #bbb;
+  border-top: 0;
+  border-right: 0;
+  background-color: #f6f6f6;
+  box-shadow: 0.2rem 0.2rem 0.4rem #e7e7e7;
+}
+
+.checkoutForm input:hover {
+  box-shadow: inset 0.3rem 0.3rem 1rem #f1f1f1;
+}
+
+.pagar {
+  width: 40%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #ddd;
+}
+
+.pagar:hover {
+  transition: 0.5s;
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #2b2b2b;
+  color: #ccc;
+}
+
+.pagar:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #3a3a3a,
+    inset -0.2rem -0.2rem 1rem #333333;
+}
+
+.separator {
+  background-color: #bbb;
+  width: 1px;
+  min-height: 15rem;
+}
+
+.btn {
+  width: 55%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #ddd;
+}
+
+.btn:hover {
+  transition: 0.5s;
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #2b2b2b;
+  color: #ccc;
+}
+
+.btn:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #3a3a3a,
+    inset -0.2rem -0.2rem 1rem #333333;
+}
+
+.error {
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: rgb(253, 32, 32);
+  margin-top: -1rem;
+}

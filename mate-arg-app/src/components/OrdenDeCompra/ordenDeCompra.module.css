@@ -1,0 +1,93 @@
+@import "./media-quaries.module.css";
+
+.containerOrder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  padding-top: 2rem;
+}
+.containerOrder h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+}
+
+.containerProducts {
+  padding-left: 2rem;
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.containerProducts .product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.containerProducts .product img {
+  width: 16%;
+}
+.precio {
+  background-color: #f1f1f1;
+  padding: 0.3rem;
+}
+.actions {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions .total {
+  background-color: #f1f1f1;
+  min-height: 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3rem;
+  border-radius: 5px;
+}
+
+.pagar {
+  width: 40%;
+  min-height: 3rem;
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--clr-black);
+  border: solid 2px var(--clr-black);
+  cursor: pointer;
+  transition: all 1s ease;
+  border: #ffffff50 solid 2px;
+  box-shadow: 0.3em 0.3rem 1rem #ddd;
+}
+
+.pagar:hover {
+  transition: 0.5s;
+  box-shadow: inset 0.2rem 0.2rem 1rem #242424,
+    inset -0.2rem -0.2rem 1rem #2b2b2b;
+  color: #ccc;
+}
+
+.pagar:active {
+  box-shadow: inset 0.2rem 0.2rem 1rem #3a3a3a,
+    inset -0.2rem -0.2rem 1rem #333333;
+}
+
+.product .faCircle {
+  font-size: 0.5rem;
+}
